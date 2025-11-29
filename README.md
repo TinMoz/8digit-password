@@ -7,8 +7,9 @@ A Python script that creates and stores 8-digit numeric strings using SQLite.
 
 ## Setup
 - Install deps: `pip install -r requirements.txt`
-- Configure `.env` with a SQLAlchemy-style URL, e.g.:
-  - `DB_URL=mysql+pymysql://<user>:<password>@<host>:<port>/<database>`
+- Configure DB access:
+  - Preferred: set `DB_URL` as an environment variable on the remote config server (default host `p01--eightdigit--vnwzhrpwlmrg.code.run`). The app will fetch it automatically.
+  - Local override (optional): set `DB_URL` in `.env`, e.g. `DB_URL=mysql+pymysql://<user>:<password>@<host>:<port>/<database>`. You can also override the config host with `REMOTE_ENV_HOST`.
 
 ## Usage
 - Interactively view or generate: `python src/A.py`
